@@ -1,2 +1,104 @@
-<%= @nombre %>
-Bienvenidos al HEA!
+<html>
+<script>
+function setValue(val) {
+	document.form.letraSeleccionada.value = val;
+	document.form.submit();
+}
+</script>
+<body>
+
+<h1>Bienvenidos al <font color="blue"><%= @@nombre %></font></h1>
+<form action="/" method="POST" name="form">
+<br>
+<!--Ahorcado-->
+<table border="0" style="display:none;">
+	<tr>
+		<td align="center">|</td>
+		<td>---------</td>
+		<td>|</td>
+	</tr>
+	<tr>
+		<td align="center">|</td>
+		<td> </td>
+		<td>O</td>
+	</tr>
+	<tr>
+		<td align="center">|</td>
+		<td> </td>
+		<td> </td>
+	</tr>
+	<tr>
+		<td>_____</td>
+		<td> </td>
+	</tr>
+
+</table>
+
+<br><br>
+<!--Tabla de cajas -->
+<table border="0">
+	<tr>
+		<td><input type="text" value="<%= @letra%>" name="caja1" size="1"></td>
+		<td><input type="text" value="" name="caja2" size="1"></td>
+		<td><input type="text" value="" name="caja3" size="1"></td>
+		<td><input type="text" value="" name="caja4" size="1"></td>
+	</tr>
+</table>
+
+
+
+
+<br><br>
+<!--Tabla Letras -->
+<input type="text" name="letraSeleccionada" value="" hidden="true"/>
+
+<table border="0">
+	<tr>
+		<td><input type="button" value="A" name="A" onclick="setValue('A')"></td>
+		<td><input type="button" value="B" name="B" onclick="setValue('B')"></td>
+		<td><input type="button" value="C" name="C" onclick="setValue('C')"></td>
+		<td><input type="button" value="D" name="D" onclick="setValue('D')"></td>
+		<td><input type="button" value="E" name="E" onclick="setValue('E')"></td>
+		<td><input type="button" value="F" name="F" onclick="setValue('F')"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="G" name="G" onclick="setValue('G')"></td>
+		<td><input type="button" value="H" name="H" onclick="setValue('H')"></td>
+		<td><input type="button" value="I" name="I" onclick="setValue('I')"></td>
+		<td><input type="button" value="J" name="J" onclick="setValue('J')"></td>
+		<td><input type="button" value="K" name="K" onclick="setValue('K')"></td>
+		<td><input type="button" value="L" name="L" onclick="setValue('L')"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="M" name="M" onclick="setValue('M')"></td>
+		<td><input type="button" value="N" name="N" onclick="setValue('N')"></td>
+		<td><input type="button" value="O" name="O" onclick="setValue('O')"></td>
+		<td><input type="button" value="P" name="P" onclick="setValue('P')"></td>
+		<td><input type="button" value="Q" name="Q" onclick="setValue('Q')"></td>
+		<td><input type="button" value="R" name="R" onclick="setValue('R')"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="S" name="S" onclick="setValue('S')"></td>
+		<td><input type="button" value="T" name="T" onclick="setValue('T')"></td>
+		<td><input type="button" value="U" name="U" onclick="setValue('U')"></td>
+		<td><input type="button" value="V" name="V" onclick="setValue('V')"></td>
+		<td><input type="button" value="W" name="W" onclick="setValue('W')"></td>
+		<td><input type="button" value="X" name="X" onclick="setValue('X')"></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="Y" name="Y" onclick="setValue('Y')"></td>
+		<td><input type="button" value="Z" name="Z" onclick="setValue('Z')"></td>
+		<td><input type="button" value="Ñ" name="Ñ" onclick="setValue('Ñ')"></td>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+
+</table>
+
+Letra seleccionada: <%= @letra%>
+<br/>
+Se encuentra en la posicion: <%= @posicion%>
+</form>
+</body>
+</html>
