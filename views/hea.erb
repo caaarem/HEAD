@@ -38,10 +38,10 @@ function setValue(val) {
 <!--Tabla de cajas -->
 <table border="0">
 	<tr>
-		<td><input type="text" value="<%= @letra%>" name="caja1" size="1"></td>
-		<td><input type="text" value="" name="caja2" size="1"></td>
-		<td><input type="text" value="" name="caja3" size="1"></td>
-		<td><input type="text" value="" name="caja4" size="1"></td>
+		<td><input type="text" value="<%= @@arrayUsuario[0]%>" name="caja1" size="1"></td>
+		<td><input type="text" value="<%= @@arrayUsuario[1]%>" name="caja2" size="1"></td>
+		<td><input type="text" value="<%= @@arrayUsuario[2]%>" name="caja3" size="1"></td>
+		<td><input type="text" value="<%= @@arrayUsuario[3]%>" name="caja4" size="1"></td>
 	</tr>
 </table>
 
@@ -99,6 +99,8 @@ function setValue(val) {
 Letra seleccionada: <%= @letra%>
 <br/>
 Se encuentra en la posicion: <%= @posicion%>
+<br/>
+<!--Errores del usuario: <%= @errores%>-->
 </form>
 </body>
 </html>

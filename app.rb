@@ -2,8 +2,10 @@ require 'sinatra'
 
 get '/' do
     @@nombre= 'HeaD!'
-    @palabra = ['g','a','t','o']
     @posicion = 0
+    @errores = 0
+    @aciertos = 0
+    @@arrayUsuario = ['','','','']
     @letra= ''
     erb :hea
 end
@@ -13,8 +15,11 @@ post '/' do
     
     @array = %w(G A T O)
     @posicion = @array.index(@letra)
-
     
+    if @posicion != nil 
+    	@@arrayUsuario[@posicion] = @letra
+       
+    end 
 
     erb :hea
 
